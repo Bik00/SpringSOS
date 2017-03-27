@@ -2,7 +2,7 @@ package yjc.wdb.persistence;
 
 import java.util.List;
 
-import yjc.wdb.domain.BoardVO;
+import yjc.wdb.domain.*;
 
 public interface BoardDAO {
 	
@@ -16,4 +16,7 @@ public interface BoardDAO {
 	
 	public List<BoardVO> listAll() throws Exception;
 	
+	public List<BoardVO> listPage(int page) throws Exception;
+	
+	public List<BoardVO> listCriteria(Criteria cri) throws Exception;
 }

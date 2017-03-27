@@ -6,7 +6,7 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
-import yjc.wdb.domain.BoardVO;
+import yjc.wdb.domain.*;
 import yjc.wdb.persistence.BoardDAO;
 
 @Service
@@ -44,6 +44,11 @@ public class BoardServiceImpl implements BoardService {
 	public List<BoardVO> listAll() throws Exception {
 		// TODO Auto-generated method stub
 		return dao.listAll();
+	}
+	
+	@Override
+	public List<BoardVO> listCriteria(Criteria cri) throws Exception {
+		return dao.listCriteria(cri);
 	}
 
 }

@@ -2,7 +2,7 @@ package yjc.wdb.service;
 
 import java.util.List;
 
-import yjc.wdb.domain.BoardVO;
+import yjc.wdb.domain.*;
 
 public interface BoardService {
 
@@ -15,4 +15,6 @@ public interface BoardService {
 	public void remove(int bno) throws Exception;
 	
 	public List<BoardVO> listAll() throws Exception;
+	
+	public List<BoardVO> listCriteria(Criteria cri) throws Exception;
 }
